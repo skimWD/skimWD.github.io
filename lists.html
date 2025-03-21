@@ -36,16 +36,37 @@
             color: #555;
         }
     </style>
+    <script>
+        async function sendData(imageId) {
+            try {
+                const response = await fetch('http://localhost:3000/log-click', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ imageId: imageId, timestamp: Date.now() }),
+                });
+
+                if (response.ok) {
+                    alert('Data sent successfully');
+                } else {
+                    console.error('Failed to send data:', response.statusText);
+                    alert('Error sending data');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while sending data');
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Image Lists</h1>
     </header>
     <section class="image-list">
-        <div class="image-item">
-			<a href="mailto:emailhere@gmail.com?subject=Image%201%20Clicked&body=The%20user%20clicked%20on%20Image%201.">
+        <div class="image-item" onClick="sendData('Image 1')">
 				<img src="image1.jpg" alt="Image 1">
-			</a>
             <div class="caption">Image 1 Caption</div>
         </div>
         <div class="image-item">
