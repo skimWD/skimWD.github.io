@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 1rem;
+            text-align: center;
+        }
+        .image-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem; /* Space between images */
+        }
+        .image-item {
+            border: 2px solid #ddd;
+            padding: 0.5rem;
+            max-width: 300px; /* Uniform width */
+            border-radius: 8px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px; /* Adds rounded corners to images */
+        }
+        .caption {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Image List</h1>
+    </header>
+    <section class="image-list">
+        <div class="image-item">
+            <img src="image1.jpg" alt="Image 1">
+            <div class="caption">Image 1 Caption</div>
+        </div>
+        <div class="image-item">
+            <img src="image2.jpg" alt="Image 2">
+            <div class="caption">Image 2 Caption</div>
+        </div>
+        <div class="image-item">
+            <img src="image3.jpg" alt="Image 3">
+            <div class="caption">Image 3 Caption</div>
+        </div>
+    </section>
+</body>
+</html>
