@@ -33,27 +33,17 @@
             color: #007BFF;
         }
 		.dropdown {
-			display: none; /* Hidden by default */
-			position: absolute; /* Positioned below the link */
-			top: 100%; /* Places it directly underneath */
+			display: none;
+			position: absolute;
+			top: 100%;
 			left: 0;
-			background-color: yellow;
-			border: 1px solid red;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			z-index: 1000;
-			padding: 0.5rem 0;
-			list-style: none;
+			background-color: white;
+			border: 1px solid #ddd;
 		}
-        .dropdown li {
-            padding: 0.5rem 1rem;
-        }
-        .dropdown li:hover {
-            background-color: #f0f0f0; /* Highlight item on hover */
-        }
-        nav a:hover .dropdown {
-            display: block !important; /* Show the dropdown on hover */
-        }
-        section {
+		nav a:hover .dropdown {
+			display: block;
+		}
+			section {
             padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
