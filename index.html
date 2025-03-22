@@ -27,9 +27,30 @@
             margin: 0 1rem;
             text-decoration: none;
             color: #333;
+			position: relative;
         }
         nav a:hover {
             color: #007BFF;
+        }
+        .dropdown {
+            display: none; /* Initially hide the dropdown list */
+            position: absolute; /* Position it directly beneath the link */
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-top: 0.5rem; /* Space between link and dropdown */
+            padding: 0.5rem 0;
+            list-style: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .dropdown li {
+            padding: 0.5rem 1rem;
+        }
+        .dropdown li:hover {
+            background-color: #f0f0f0; /* Highlight item on hover */
+        }
+        nav a:hover .dropdown {
+            display: block; /* Show the dropdown on hover */
         }
         section {
             padding: 2rem;
@@ -60,7 +81,13 @@
         <h1>Insert Webstie title!</h1>
     </header>
     <nav>
-        <a href="about.html">About</a>
+        <a href="about.html">About
+            <ul class="dropdown">
+                <li><a href="#our-team">Our Team</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#history">History</a></li>
+            </ul>
+		</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
         <a href="lists.html">Lists</a>		
